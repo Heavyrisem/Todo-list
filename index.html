@@ -4,24 +4,34 @@
     <head>
         <link type="text/css" href="style.css" rel="stylesheet">
 
+        <title>TODO List: Wish you do not forget important jobs</title>
+
         <script>
-            //javascriptarea
+            //javascript area
         </script>
     </head>
 
     <body>
-        <span class="title">Todo - List</span>
-        <div id="newBtn" class="makeNew">+ 새로 만들기</div>
-
-        <div class="box">
-            <div class="boxTitle">
-                Title
-            </div>
-            <hr>
-            <div class="boxContent">
-                Content
-            </div>
+        <!-- 위쪽 부분 header 로 묶어서 속성 관리 -->
+        <div class="header">
+            <span class="title">Todo - List</span>
         </div>
+
+        <!-- 데이터 표시 부분 -->
+        <div class="box">
+            <div class="inputArea">
+                <div class="boxTitle">
+                    <input type="text" placeholder="제목을 입력하세요."></input>
+                </div>
+                <hr>
+                <div class="boxContent">
+                    <input type="text" placeholder="내용을 입력하세요."></input>
+                </div>
+            </div>
+            
+            <div id="newBtn" class="makeNew">+ 새로 만들기</div>
+        </div>
+        <hr>
     </body>
 
 </html>

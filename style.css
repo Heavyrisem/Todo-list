@@ -1,37 +1,99 @@
+.header {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    display: flex; /* justify-content 사용하려면 flex 여야 함 */
+    justify-content: space-between; /*https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content */
+}
+
 .title {
     font-size: 30px;
-    float: left;
-    left: 30px;
-    top: 50px;
-    position: relative
 }
 
+/* '+ 새로 만들기' 버튼 */
 .makeNew {
-    float: right;
-    right: 30px;
-    top: 50px;
-    position: relative;
-    
-    text-align: center;
-    
-    border: 1px solid gray;
+    border: 1px solid grey;
     padding: 10px 10px 10px 10px;
+
+    width: 10%;
+
+    background-color: #dadada;
+    box-shadow: 2px 2px 2px gray;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     border-radius: 10px;
+
+    /* 텍스트 드래그 선택 방지 */
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+}
+.makeNew:hover {
+    background-color: #bbbbbb;
+    box-shadow: 2px 2px 2px gray inset;
+    cursor: pointer;
 }
 
-.box {
-    top:150px;
-    position: relative;
-    
-    align-self: center;
+.box { /* 포스트 박스 */
+    display: flex;
     
     border: 1px solid gray;
-    padding: 10px 30px 10px 30px;
-    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
 }
-.boxTitle {
-    
-}
-.boxContent {
 
+.inputArea {
+    width: 90%;
+    margin: 0 10px 0 0;
 }
+
+/* 포스트 제목 */
+.boxTitle {
+    display: flex;
+}
+.boxTitle input {
+    padding: 15px;
+}
+
+/* 포스트 내용 */
+.boxContent {
+    display: flex;
+}
+.boxContent input {
+    padding: 5px;
+}
+
+/* 포스트 제목, 내용 input */
+.box div input {
+    border: 1px;
+    border-radius: 5px;
+    width: 100%;
+
+    box-shadow: 0px 1px 3px gray;
+
+    display: block;
+}
+
+/* 구분선 */
+hr {
+    height: 2px;
+    margin: 10px 0 10px 0;
+
+    background: #dadada;
+    border: 0;
+}
+
+/* .box div span:after {
+    height: 0.1rem;
+
+    display: block;
+    
+    content: "";
+    
+    opacity: 0.6;
+    background: #7289DA;    
+} */
